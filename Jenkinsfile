@@ -4,6 +4,9 @@ pipeline {
             label 'docker-agent-first'
             }
       }
+      triggers {
+        pollSCM("* * * * *")
+    }
     stages {
         stage('Build') {
             steps {
