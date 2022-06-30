@@ -1,1 +1,1 @@
-print("hello  sidik")
+print("hello first scrutation")
