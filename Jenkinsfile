@@ -14,7 +14,7 @@ pipeline {
                 sh '''
                 echo "doing build stuff.."
                 '''
-
+                sh apt-get install ruby-full build-essential zlib1g-dev
             }
         }
 /*        stage('Test') {
