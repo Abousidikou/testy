@@ -10,7 +10,7 @@ pipeline {
             steps {
                 echo "Building.."
                 sh '''
-                cat /etc/nginx/conf.d/default.conf
+                bundle jekyll serve --port 80
                 '''
             }
         }
