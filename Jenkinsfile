@@ -3,6 +3,10 @@ pipeline {
         node {
             label 'deploy'
             }
+        docker {
+            image 'nginx:latest'
+            args '-p 3377:80'
+        }
       }
       triggers {
         pollSCM("*/5 * * * *")
@@ -12,10 +16,7 @@ pipeline {
             steps {
                 echo "Building.."
                 sh '''
-                echo "doing build stuff.."
-                '''
-                sh '''
-                apt install ruby-full build-essential zlib1g-dev
+                cat /etc/nginx/conf.d/default.conf
                 '''
             }
         }
