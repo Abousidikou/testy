@@ -1,11 +1,11 @@
 pipeline {
     agent { 
         node {
-            label 'docker-agent-first'
+            label 'deploy'
             }
       }
       triggers {
-        pollSCM("* * * * *")
+        pollSCM("*/5 * * * *")
     }
     stages {
         stage('Build') {
@@ -14,9 +14,10 @@ pipeline {
                 sh '''
                 echo "doing build stuff.."
                 '''
+
             }
         }
-        stage('Test') {
+/*        stage('Test') {
             steps {
                 echo "Testing.."
                 sh '''
@@ -31,6 +32,6 @@ pipeline {
                 echo "doing delivery stuff.."
                 '''
             }
-        }
+        }*/
     }
 }
