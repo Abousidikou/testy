@@ -1,8 +1,8 @@
 pipeline {
     agent { 
-        node {
+        /*node {
             label 'deploy'
-            }
+            }*/
         docker {
             image 'nginx:latest'
             args '-p 3377:80'
