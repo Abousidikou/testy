@@ -5,6 +5,7 @@ pipeline {
       steps {
         sh '''
           ruby -v
+          ruby bundle 
         '''
       }
     }
