@@ -5,8 +5,7 @@ pipeline {
       steps {
         sh '''
           ls
-          bundle add webrick
-          bundle exec jekyll build
+          jekyll --version
         '''
       }
     }
