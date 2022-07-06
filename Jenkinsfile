@@ -4,19 +4,7 @@ pipeline {
     stage('Test') {
       steps {
         sh '''
-          node --version
-          git --version
-          curl --version
-        '''
-      }
-    }
-
-    stage('Clone') {
-      steps {
-        sh '''
-          git clone https://github.com/Abousidikou/testy
-          cd testy
-          ls
+          jekyll --version
         '''
       }
     }
