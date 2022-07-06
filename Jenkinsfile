@@ -4,7 +4,6 @@ pipeline {
     stage('Test') {
       steps {
         sh '''
-          ls
           ruby -v
         '''
       }
