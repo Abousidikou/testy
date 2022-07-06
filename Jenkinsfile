@@ -4,7 +4,9 @@ pipeline {
     stage('Test') {
       steps {
         sh '''
-          bundle install
+          ls
+          git clone https://github.com/Abousidikou/testy
+          ls
         '''
       }
     }
