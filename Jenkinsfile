@@ -9,6 +9,13 @@ pipeline {
           curl --version
         '''
       }
+      steps {
+        sh '''
+          git clone https://github.com/Abousidikou/testy
+          cd testy
+          ls
+        '''
+      }
     }
   }
 }
