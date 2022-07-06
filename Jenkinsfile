@@ -6,6 +6,7 @@ pipeline {
         sh '''
           ruby -v
           bundle install
+          bundle exec jelyll build
         '''
       }
     }
