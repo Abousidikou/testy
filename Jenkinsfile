@@ -5,8 +5,7 @@ pipeline {
       steps {
         sh '''
           ls
-          git clone https://github.com/Abousidikou/testy
-          ls
+          bundle exec jekyll build
         '''
       }
     }
