@@ -5,7 +5,9 @@ RUN rm /bin/sh && ln -s /bin/bash /bin/sh
 RUN apt-get update
 
 
-RUN yes | apt-get install git ruby-full build-essential zlib1g-dev 
+RUN yes | apt-get install rvm git  build-essential zlib1g-dev
+
+RUN apt-get install rvm install 2.7.4 
 
 
 RUN echo '# Install Ruby Gems to ~/gems' >> ~/.bashrc
