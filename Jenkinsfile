@@ -6,8 +6,7 @@ pipeline {
         sh '''
           ruby -v
           gem install jekyll
-          bundle install
-          bundle exec jelyll build
+          jelyll build --destination /var/www/html
         '''
       }
     }
