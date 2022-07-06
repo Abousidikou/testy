@@ -17,5 +17,15 @@ pipeline {
         '''
       }
     }
+
+    stage('Clone') {
+      steps {
+        sh '''
+          git clone https://github.com/Abousidikou/testy
+          cd testy
+          ls
+        '''
+      }
+    }
   }
 }
