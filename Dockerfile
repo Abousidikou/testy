@@ -1,3 +1,5 @@
-FROM jekyll/jekyll
+FROM alpine
+
+RUN apt-get update
 
 
