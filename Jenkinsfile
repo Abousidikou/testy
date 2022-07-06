@@ -1,34 +1,12 @@
 pipeline {
-    agent {
-    	label 'deploy'
-	}
-     triggers {
-        pollSCM("*/5 * * * *")
+  agent {
+    docker { image 'node:16-alpine' }
+  }
+  stages {
+    stage('Test') {
+      steps {
+        sh 'node --version'
+      }
     }
-    stages {
-        stage('Build') {
-            steps {
-                echo "Building.."
-                sh '''
-                bundle jekyll serve --port 80
-                '''
-            }
-        }
-/*        stage('Test') {
-            steps {
-                echo "Testing.."
-                sh '''
-                echo "doing test stuff.."
-                '''
-            }
-        }
-        stage('Deliver') {
-            steps {
-                echo 'Deliver....'
-                sh '''
-                echo "doing delivery stuff.."
-                '''
-            }
-        }*/
-    }
+  }
 }
