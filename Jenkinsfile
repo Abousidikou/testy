@@ -6,7 +6,7 @@ pipeline {
         sh '''
           ruby -v
           gem install jekyll
-          ls -Rl /usr/local/gems
+          ls -Rl /usr/local/
         '''
       }
     }
