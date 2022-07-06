@@ -1,3 +1,3 @@
-FROM nginx
+FROM jekyll/jekyll
 
 RUN apt-get update
