@@ -5,7 +5,7 @@ pipeline {
       steps {
         sh '''
           ls
-          bundle exec jekyll build
+          ruby -v
         '''
       }
     }
