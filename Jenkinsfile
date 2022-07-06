@@ -4,7 +4,7 @@ pipeline {
     stage('Test') {
       steps {
         sh '''
-          jekyll --version
+          bundle install
         '''
       }
     }
