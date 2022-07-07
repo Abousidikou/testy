@@ -3,7 +3,12 @@ pipeline {
   stages {
     stage('Test') {
       steps {
-        sh 'ls'
+        sh '''
+        ls
+        /home/emes/gems/bin/bundle --version
+        /home/emes/gems/bin/jekyll --version
+        bundle --version
+        '''
       }
     }
   }
