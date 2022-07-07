@@ -5,8 +5,7 @@ pipeline {
       steps {
         sh '''
         ls
-        gem install addressable -v '2.8.0'
-        gem install colorator -v '1.1.0'
+        gem install bundler:2.3.16
         /home/emes/gems/bin/bundle update
         /home/emes/gems/bin/bundle exec jekyll serve
         '''
