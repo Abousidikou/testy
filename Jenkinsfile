@@ -1,13 +1,9 @@
 pipeline {
-  agent { dockerfile true }
+  agent none
   stages {
     stage('Test') {
       steps {
-        sh '''
-          ruby -v
-          gem install jekyll bundle 
-          jekyll --version
-        '''
+        sh 'ls'
       }
     }
   }
