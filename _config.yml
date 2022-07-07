@@ -39,7 +39,7 @@ defaults:
   -
     scope:
       path: "" #here we have path to directories to which files these defaults values will be apply to.Ex "projects"
-      type: post
+      type: posts
     values:
       # Values
       layout: post
