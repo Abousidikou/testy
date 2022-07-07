@@ -5,9 +5,8 @@ pipeline {
       steps {
         sh '''
         ls
-        /home/emes/gems/bin/bundle --version
-        /home/emes/gems/bin/jekyll --version
-        bundle --version
+        /home/emes/gems/bin/bundle update
+        /home/emes/gems/bin/bundle exec jekyll serve
         '''
       }
     }
