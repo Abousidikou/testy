@@ -5,8 +5,7 @@ pipeline {
       steps {
         sh '''
           ruby -v
-          gem install jekyll
-          locate jekyll
+          gem install jekyll bundle 
           ls -Rl /usr/local/
         '''
       }
